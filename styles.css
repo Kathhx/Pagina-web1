@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Poppins", sans-serif;
+}
+
+
+.menu{
+    
+	background-color: black;
+	color: #fff;
+	height: 80px;
+}
+
+.menu__container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 1200px;
+	height: 100%;
+	margin: 0 auto;/*centro*/
+}
+
+.menu__links{
+	height: 100%;
+	transition: transfor .5s;
+	display: flex;
+}
+
+.menu__item{
+	list-style: none;
+	position: relative;
+	height: 100%;
+	/* Que esconda los submenus */
+	--clip: polygon(0 0,100% 0,100% 0,0 0);
+}
+
+.menu__item:hover{
+	/* Que muestre al apachar los submenus */
+--clip: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+.menu__nesting{
+	clip-path: var(--clip);
+}
+
+.menu__link{
+	color: #fff;
+	text-decoration: none;
+	padding: 0 50px;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	background-color: black;
+}
+
+
+.menu__link:hover{
+    background-color: red;
+}
+
+.division{
+    padding: 20px;
+}
+
+.logotipo{
+    width: 100px;
+    height: 70px;
+}
+
+.imgcarrito{
+    padding-top: 15px;
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+    transition: 1s;
+    margin: 10px;
+}
+.imgcarrito:hover{
+    box-shadow: 0 0 10px black;
+    scale: 1.2;
+}
+img{
+    max-width: 100%;
+}
+
+/*Contenedor de inicio*/
+.header{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    background-color: white;
+    padding: 70px 0;
+    border: solid;
+    /* background-image: url(https://th.bing.com/th/id/OIP.GVTiK9iYrVSx4M2akp1LZQEsC7?rs=1&pid=ImgDetMain);*/
+}
+
+/*Contenido del header*/
+.header-contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 200px;
+}
+
+/*Diseño de la imagen del header*/
+.header-img{
+    flex-basis: 30%;
+    text-align: center; 
+}
+.header-img img{
+    width: 255px;
+    height: 450px;
+}
+
+/*Diseño del texto del header*/
+.header-text{
+    flex-basis: 70%;
+    text-align: center;
+}
+
+.header-txt h1{
+    font-size: 170px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.header-txt p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+
+/*Diseño del botón de buscar del index*/
+.buscar1{
+    margin-top: 20px;
+    flex-basis: 90%;
+    text-align: center;
+}
+
+.buscar1 input{
+    margin: 15px 0;
+    padding: 15px;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: black;
+    min-width: 90%;
+    margin-bottom: 50px;
+}
+
+.buscar1 button{
+    left: 77.2%;
+    background-color: red;
+    width: 50px;
+    height: 46.5px;
+    border: none;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-right: 0.5px solid black;
+    position: absolute;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;   
+}
+.buscar1 button:hover{
+    background-color: blue;
+}
+
+/*Diseño del botón de buscar de las otras páginas*/
+.buscar{
+    margin-top: 20px;
+    flex-basis: 90%;
+    text-align: center;
+}
+
+.buscar input{
+    margin: 15px 0;
+    padding: 15px;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: black;
+    min-width: 90%;
+    margin-bottom: 50px;
+}
+
+.buscar button{
+    right: 79px;
+    background-color: red;
+    width: 50px;
+    height: 46.5px;
+    border: none;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-right: 0.5px solid black;
+    position: absolute;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;   
+}
+.buscar button:hover{
+    background-color: blue;
+}
+
+
+
+/*Diseño de los enlaces a otras paginas del inicio*/
+.enlaces-contenedor{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+.enlace{
+    padding: 50px 0;
+    text-align: center;
+    transition: 1s;
+}
+.enlace img:hover{
+    box-shadow: 0 0 10px #fff;
+    scale: 1.05;
+}
+
+.enlace img{
+    width: 260px;
+    height: 270px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+
+/*Diseño del contenedor que tiene los productos*/
+.producto-contenedor{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+}
+
+/*Diseño del contenedor individual de cada producto*/
+.producto{
+    text-align: center;
+    text-align: center;
+    padding: 35px;
+    box-shadow: 0 0 10px rgb(0, 0, 0,1);
+    transition: 0.7s;
+}
+
+.producto:hover{
+    box-shadow: 0 0 10px #666;
+    scale: 1.05;
+}
+
+.producto img{
+    width: 200px;
+    height: 290px;
+    margin-bottom: 20px;
+}
+
+.producto h3{
+    font-size: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.producto p, .precio{
+    font-size: 16px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/*Clase de negrita del precio*/
+.precio{
+    font-weight: 800;
+}
+
+/*Diseño de la class titulo*/
+.title{
+    margin-top: 50px;
+    font-size: 35px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/*Diseño del botón de agregar a carrito*/
+.btn-2{
+    margin: 15px 0;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    border:none;
+    border-radius: 5px;
+    letter-spacing:  1.5px;
+    text-align: center;
+}
+.btn-2:hover{
+    background-color: orange;
+}
+
+
+/*Diseño del prie de página*/
+.pie{
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    background-color: black;
+    padding: 70px 0;
+    margin-top: 50px;
+}
+
